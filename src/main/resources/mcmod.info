@@ -1,0 +1,17 @@
+[
+  {
+    "modid": "azorius.club  ",
+    "name": "Azorius.club",
+    "description": "1.12.2 Anarchy Client based on OyVey",
+    "version": "1.0",
+    "mcversion": "1.12.2",
+    "logoFile": "niggahack.png",
+    "url": "https://discordapp.com/invite/WcAx3ps",
+    "updateUrl": "",
+    "authorList": [
+      "HK"
+    ],
+    "screenshots": [],
+    "dependencies": []
+  }
+]
