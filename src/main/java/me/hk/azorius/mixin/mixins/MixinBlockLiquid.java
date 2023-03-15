@@ -1,4 +1,4 @@
-package me.alpha432.oyvey.mixin.mixins;
+package me.hk.azorius.mixin.mixins;
 
 import me.alpha432.oyvey.features.modules.player.LiquidInteract;
 import net.minecraft.block.Block;

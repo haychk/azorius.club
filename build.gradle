@@ -114,7 +114,7 @@ jar {
                 'FMLCorePluginContainsFMLMod': 'true',
                 'FMLCorePlugin': 'me.hk.azorius.mixin.AzoriusMixinLoader',
                 'ForceLoadAsMod': 'true',
-                'FMLAT': 'oyvey_at.cfg'
+                'FMLAT': 'azorius_at.cfg'
         )
     }
 }

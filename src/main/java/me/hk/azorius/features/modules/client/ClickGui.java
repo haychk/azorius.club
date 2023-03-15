@@ -1,11 +1,11 @@
-package me.alpha432.oyvey.features.modules.client;
+package me.hk.azorius.features.modules.client;
 
 import com.mojang.realmsclient.gui.ChatFormatting;
-import me.alpha432.oyvey.OyVey;
-import me.alpha432.oyvey.event.events.ClientEvent;
-import me.alpha432.oyvey.features.command.Command;
-import me.alpha432.oyvey.features.modules.Module;
-import me.alpha432.oyvey.features.setting.Setting;
+import me.hk.azorius.Azorius;
+import me.hk.azorius.event.events.ClientEvent;
+import me.hk.azorius.features.command.Command;
+import me.hk.azorius.features.modules.Module;
+import me.hk.azorius.features.setting.Setting;
 import net.minecraft.client.settings.GameSettings;
 import net.minecraftforge.fml.common.eventhandler.SubscribeEvent;
 

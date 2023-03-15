@@ -1,7 +1,7 @@
-package me.alpha432.oyvey.mixin.mixins;
+package me.hk.azorius.mixin.mixins;
 
 import com.google.common.base.Predicate;
-import me.alpha432.oyvey.features.modules.misc.NoHitBox;
+import me.hk.azorius.features.modules.misc.NoHitBox;
 import net.minecraft.client.Minecraft;
 import net.minecraft.client.multiplayer.WorldClient;
 import net.minecraft.client.renderer.EntityRenderer;

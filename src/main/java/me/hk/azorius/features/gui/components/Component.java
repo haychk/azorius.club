@@ -1,12 +1,12 @@
-package me.alpha432.oyvey.features.gui.components;
+package me.hk.azorius.features.gui.components;
 
-import me.alpha432.oyvey.OyVey;
-import me.alpha432.oyvey.features.Feature;
-import me.alpha432.oyvey.features.gui.components.items.Item;
-import me.alpha432.oyvey.features.gui.components.items.buttons.Button;
-import me.alpha432.oyvey.features.modules.client.ClickGui;
-import me.alpha432.oyvey.util.ColorUtil;
-import me.alpha432.oyvey.util.RenderUtil;
+import me.hk.azorius.Azorius;
+import me.hk.azorius.features.Feature;
+import me.hk.azorius.features.gui.components.items.Item;
+import me.hk.azorius.features.gui.components.items.buttons.Button;
+import me.hk.azorius.features.modules.client.ClickGui;
+import me.hk.azorius.util.ColorUtil;
+import me.hk.azorius.util.RenderUtil;
 import net.minecraft.client.audio.PositionedSoundRecord;
 import net.minecraft.client.gui.Gui;
 import net.minecraft.init.SoundEvents;
@@ -57,7 +57,7 @@ public class Component
         if (this.open) {
             RenderUtil.drawRect(this.x, (float) this.y + 12.5f, this.x + this.width, (float) (this.y + this.height) + totalItemHeight, 0x77000000);
         }
-        OyVey.textManager.drawStringWithShadow(this.getName(), (float) this.x + 3.0f, (float) this.y - 4.0f - (float) me.alpha432.oyvey.features.gui.AzoriusGui.getClickGui().getTextOffset(), -1);
+        OyVey.textManager.drawStringWithShadow(this.getName(), (float) this.x + 3.0f, (float) this.y - 4.0f - (float) me.hk.azorius.features.gui.AzoriusGui.getClickGui().getTextOffset(), -1);
         if (this.open) {
             float y = (float) (this.getY() + this.getHeight()) - 3.0f;
             for (Item item : this.getItems()) {
@@ -75,7 +75,7 @@ public class Component
         if (mouseButton == 0 && this.isHovering(mouseX, mouseY)) {
             this.x2 = this.x - mouseX;
             this.y2 = this.y - mouseY;
-            me.alpha432.oyvey.features.gui.AzoriusGui.getClickGui().getComponents().forEach(component -> {
+            me.hk.azorius.features.gui.AzoriusGui.getClickGui().getComponents().forEach(component -> {
                 if (component.drag) {
                     component.drag = false;
                 }

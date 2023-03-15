@@ -1,6 +1,6 @@
-package me.alpha432.oyvey.util;
+package me.hk.azorius.util;
 
-import me.alpha432.oyvey.features.modules.client.ClickGui;
+import me.hk.azorius.features.modules.client.ClickGui;
 
 import java.awt.*;
 
