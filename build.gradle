@@ -120,3 +120,4 @@ jar {
 }
 
 build.dependsOn(shadowJar)
+// FIXME - find and resolve issue in build script.
