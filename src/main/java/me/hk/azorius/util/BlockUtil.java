@@ -1,8 +1,8 @@
-package me.alpha432.oyvey.util;
+package me.hk.azorius.util;
 
 import com.google.common.util.concurrent.AtomicDouble;
-import me.alpha432.oyvey.OyVey;
-import me.alpha432.oyvey.features.command.Command;
+import me.hk.azorius.Azorius;
+import me.hk.azorius.features.command.Command;
 import net.minecraft.block.*;
 import net.minecraft.block.material.Material;
 import net.minecraft.block.state.IBlockState;
