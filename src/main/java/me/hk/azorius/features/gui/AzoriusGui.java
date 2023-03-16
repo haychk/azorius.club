@@ -46,13 +46,13 @@ public class AzoriusGui
 
     private void load() {
         int x = -84;
-        for (final Module.Category category : OyVey.moduleManager.getCategories()) {
+        for (final Module.Category category : Azorius.moduleManager.getCategories()) {
             this.components.add(new Component(category.getName(), x += 90, 4, true) {
 
                 @Override
                 public void setupItems() {
                     counter1 = new int[]{1};
-                    OyVey.moduleManager.getModulesByCategory(category).forEach(module -> {
+                    Azorius.moduleManager.getModulesByCategory(category).forEach(module -> {
                         if (!module.hidden) {
                             this.addButton(new ModuleButton(module));
                         }

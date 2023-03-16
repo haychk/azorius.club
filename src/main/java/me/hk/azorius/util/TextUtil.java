@@ -1,4 +1,4 @@
-package me.alpha432.oyvey.util;
+package me.hk.azorius.util;
 
 import com.mojang.realmsclient.gui.ChatFormatting;
 

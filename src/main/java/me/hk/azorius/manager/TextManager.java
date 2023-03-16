@@ -1,10 +1,10 @@
-package me.alpha432.oyvey.manager;
+package me.hk.azorius.manager;
 
-import me.alpha432.oyvey.OyVey;
-import me.alpha432.oyvey.features.Feature;
-import me.alpha432.oyvey.features.gui.font.CustomFont;
-import me.alpha432.oyvey.features.modules.client.FontMod;
-import me.alpha432.oyvey.util.Timer;
+import me.hk.azorius.Azorius;
+import me.hk.azorius.features.Feature;
+import me.hk.azorius.features.gui.font.CustomFont;
+import me.hk.azorius.features.modules.client.FontMod;
+import me.hk.azorius.util.Timer;
 import net.minecraft.util.math.MathHelper;
 
 import java.awt.*;
@@ -23,7 +23,7 @@ public class TextManager
     }
 
     public void init(boolean startup) {
-        FontMod cFont = OyVey.moduleManager.getModuleByClass(FontMod.class);
+        FontMod cFont = Azorius.moduleManager.getModuleByClass(FontMod.class);
         try {
             this.setFontRenderer(new Font(cFont.fontName.getValue(), cFont.fontStyle.getValue(), cFont.fontSize.getValue()), cFont.antiAlias.getValue(), cFont.fractionalMetrics.getValue());
         } catch (Exception exception) {
@@ -36,7 +36,7 @@ public class TextManager
     }
 
     public void drawString(String text, float x, float y, int color, boolean shadow) {
-        if (OyVey.moduleManager.isModuleEnabled(FontMod.getInstance().getName())) {
+        if (Azorius.moduleManager.isModuleEnabled(FontMod.getInstance().getName())) {
             if (shadow) {
                 this.customFont.drawStringWithShadow(text, x, y, color);
             } else {
@@ -48,14 +48,14 @@ public class TextManager
     }
 
     public int getStringWidth(String text) {
-        if (OyVey.moduleManager.isModuleEnabled(FontMod.getInstance().getName())) {
+        if (Azorius.moduleManager.isModuleEnabled(FontMod.getInstance().getName())) {
             return this.customFont.getStringWidth(text);
         }
         return TextManager.mc.fontRenderer.getStringWidth(text);
     }
 
     public int getFontHeight() {
-        if (OyVey.moduleManager.isModuleEnabled(FontMod.getInstance().getName())) {
+        if (Azorius.moduleManager.isModuleEnabled(FontMod.getInstance().getName())) {
             String text = "A";
             return this.customFont.getStringHeight(text);
         }

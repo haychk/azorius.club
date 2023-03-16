@@ -1,12 +1,12 @@
-package me.alpha432.oyvey.features.modules.render;
+package me.hk.azorius.features.modules.render;
 
 import com.google.common.collect.Maps;
-import me.alpha432.oyvey.event.events.Render2DEvent;
-import me.alpha432.oyvey.features.modules.Module;
-import me.alpha432.oyvey.features.setting.Setting;
-import me.alpha432.oyvey.util.EntityUtil;
-import me.alpha432.oyvey.util.RenderUtil;
-import me.alpha432.oyvey.util.Util;
+import me.hk.azorius.event.events.Render2DEvent;
+import me.hk.azorius.features.modules.Module;
+import me.hk.azorius.features.setting.Setting;
+import me.hk.azorius.util.EntityUtil;
+import me.hk.azorius.util.RenderUtil;
+import me.hk.azorius.util.Util;
 import net.minecraft.entity.Entity;
 import net.minecraft.entity.EntityLivingBase;
 import net.minecraft.entity.player.EntityPlayer;

@@ -1,6 +1,6 @@
-package me.alpha432.oyvey.mixin.mixins;
+package me.hk.azorius.mixin.mixins;
 
-import me.alpha432.oyvey.features.modules.misc.ExtraTab;
+import me.hk.azorius.features.modules.misc.ExtraTab;
 import net.minecraft.client.gui.Gui;
 import net.minecraft.client.gui.GuiPlayerTabOverlay;
 import net.minecraft.client.network.NetworkPlayerInfo;

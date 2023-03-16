@@ -1,12 +1,12 @@
-package me.alpha432.oyvey.features.command.commands;
+package me.hk.azorius.features.command.commands;
 
 import com.google.gson.JsonParser;
 import com.mojang.realmsclient.gui.ChatFormatting;
-import me.alpha432.oyvey.OyVey;
-import me.alpha432.oyvey.features.command.Command;
-import me.alpha432.oyvey.features.modules.Module;
-import me.alpha432.oyvey.features.setting.Setting;
-import me.alpha432.oyvey.manager.ConfigManager;
+import me.hk.azorius.Azorius;
+import me.hk.azorius.features.command.Command;
+import me.hk.azorius.features.modules.Module;
+import me.hk.azorius.features.setting.Setting;
+import me.hk.azorius.manager.ConfigManager;
 
 public class ModuleCommand
         extends Command {
@@ -19,20 +19,20 @@ public class ModuleCommand
         Setting setting;
         if (commands.length == 1) {
             ModuleCommand.sendMessage("Modules: ");
-            for (Module.Category category : OyVey.moduleManager.getCategories()) {
+            for (Module.Category category : Azorius.moduleManager.getCategories()) {
                 String modules = category.getName() + ": ";
-                for (Module module1 : OyVey.moduleManager.getModulesByCategory(category)) {
+                for (Module module1 : Azorius.moduleManager.getModulesByCategory(category)) {
                     modules = modules + (module1.isEnabled() ? ChatFormatting.GREEN : ChatFormatting.RED) + module1.getName() + ChatFormatting.WHITE + ", ";
                 }
                 ModuleCommand.sendMessage(modules);
             }
             return;
         }
-        Module module = OyVey.moduleManager.getModuleByDisplayName(commands[0]);
+        Module module = Azorius.moduleManager.getModuleByDisplayName(commands[0]);
         if (module == null) {
-            module = OyVey.moduleManager.getModuleByName(commands[0]);
+            module = Azorius.moduleManager.getModuleByName(commands[0]);
             if (module == null) {
-                ModuleCommand.sendMessage("This module doesnt exist.");
+                ModuleCommand.sendMessage("This module doesn't exist.");
                 return;
             }
             ModuleCommand.sendMessage(" This is the original name of the module. Its current name is: " + module.getDisplayName());

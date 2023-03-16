@@ -1,13 +1,13 @@
-package me.alpha432.oyvey.features.modules.combat;
+package me.hk.azorius.features.modules.combat;
 
 import com.mojang.realmsclient.gui.ChatFormatting;
-import me.alpha432.oyvey.features.command.Command;
-import me.alpha432.oyvey.features.modules.Module;
-import me.alpha432.oyvey.features.setting.Setting;
-import me.alpha432.oyvey.util.BlockUtil;
-import me.alpha432.oyvey.util.EntityUtil;
-import me.alpha432.oyvey.util.InventoryUtil;
-import me.alpha432.oyvey.util.MathUtil;
+import me.hk.azorius.features.command.Command;
+import me.hk.azorius.features.modules.Module;
+import me.hk.azorius.features.setting.Setting;
+import me.hk.azorius.util.BlockUtil;
+import me.hk.azorius.util.EntityUtil;
+import me.hk.azorius.util.InventoryUtil;
+import me.hk.azorius.util.MathUtil;
 import net.minecraft.block.BlockWeb;
 import net.minecraft.block.material.Material;
 import net.minecraft.entity.item.EntityMinecartTNT;

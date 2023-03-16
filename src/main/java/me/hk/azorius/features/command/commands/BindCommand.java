@@ -4,7 +4,7 @@ import com.mojang.realmsclient.gui.ChatFormatting;
 import me.hk.azorius.Azorius;
 import me.hk.azorius.features.command.Command;
 import me.hk.azorius.features.modules.Module;
-import me.alpha432.oyvey.features.setting.Bind;
+import me.hk.azorius.features.setting.Bind;
 import org.lwjgl.input.Keyboard;
 
 public class BindCommand

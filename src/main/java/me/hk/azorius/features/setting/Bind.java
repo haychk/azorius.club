@@ -1,4 +1,4 @@
-package me.alpha432.oyvey.features.setting;
+package me.hk.azorius.features.setting;
 
 import com.google.common.base.Converter;
 import com.google.gson.JsonElement;

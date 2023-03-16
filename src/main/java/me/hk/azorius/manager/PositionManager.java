@@ -1,6 +1,6 @@
-package me.alpha432.oyvey.manager;
+package me.hk.azorius.manager;
 
-import me.alpha432.oyvey.features.Feature;
+import me.hk.azorius.features.Feature;
 import net.minecraft.network.play.client.CPacketPlayer;
 
 public class PositionManager

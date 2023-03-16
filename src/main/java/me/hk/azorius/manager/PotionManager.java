@@ -1,7 +1,7 @@
-package me.alpha432.oyvey.manager;
+package me.hk.azorius.manager;
 
 import com.mojang.realmsclient.gui.ChatFormatting;
-import me.alpha432.oyvey.features.Feature;
+import me.hk.azorius.features.Feature;
 import net.minecraft.client.resources.I18n;
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.potion.Potion;

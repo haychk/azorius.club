@@ -1,8 +1,8 @@
-package me.alpha432.oyvey.features.modules.misc;
+package me.hk.azorius.features.modules.misc;
 
 import io.netty.buffer.Unpooled;
-import me.alpha432.oyvey.event.events.PacketEvent;
-import me.alpha432.oyvey.features.modules.Module;
+import me.hk.azorius.event.events.PacketEvent;
+import me.hk.azorius.features.modules.Module;
 import net.minecraft.network.PacketBuffer;
 import net.minecraft.network.play.client.CPacketCustomPayload;
 import net.minecraftforge.fml.common.eventhandler.SubscribeEvent;

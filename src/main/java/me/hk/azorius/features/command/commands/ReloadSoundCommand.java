@@ -2,10 +2,10 @@
 // Decompiled by Procyon v0.5.36
 //
 
-package me.alpha432.oyvey.features.command.commands;
+package me.hk.azorius.features.command.commands;
 
 import com.mojang.realmsclient.gui.ChatFormatting;
-import me.alpha432.oyvey.features.command.Command;
+import me.hk.azorius.features.command.Command;
 import net.minecraft.client.audio.SoundHandler;
 import net.minecraft.client.audio.SoundManager;
 import net.minecraftforge.fml.common.ObfuscationReflectionHelper;

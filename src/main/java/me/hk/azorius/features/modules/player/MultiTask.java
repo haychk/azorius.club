@@ -1,6 +1,6 @@
-package me.alpha432.oyvey.features.modules.player;
+package me.hk.azorius.features.modules.player;
 
-import me.alpha432.oyvey.features.modules.Module;
+import me.hk.azorius.features.modules.Module;
 
 public class MultiTask
         extends Module {

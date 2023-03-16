@@ -1,12 +1,12 @@
-package me.alpha432.oyvey.features.modules.combat;
+package me.hk.azorius.features.modules.combat;
 
-import me.alpha432.oyvey.event.events.PacketEvent;
-import me.alpha432.oyvey.event.events.ProcessRightClickBlockEvent;
-import me.alpha432.oyvey.features.modules.Module;
-import me.alpha432.oyvey.features.setting.Setting;
-import me.alpha432.oyvey.util.EntityUtil;
-import me.alpha432.oyvey.util.InventoryUtil;
-import me.alpha432.oyvey.util.Timer;
+import me.hk.azorius.event.events.PacketEvent;
+import me.hk.azorius.event.events.ProcessRightClickBlockEvent;
+import me.hk.azorius.features.modules.Module;
+import me.hk.azorius.features.setting.Setting;
+import me.hk.azorius.util.EntityUtil;
+import me.hk.azorius.util.InventoryUtil;
+import me.hk.azorius.util.Timer;
 import net.minecraft.block.BlockObsidian;
 import net.minecraft.block.BlockWeb;
 import net.minecraft.client.gui.inventory.GuiContainer;

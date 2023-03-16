@@ -1,8 +1,8 @@
-package me.alpha432.oyvey.features.modules.combat;
+package me.hk.azorius.features.modules.combat;
 
-import me.alpha432.oyvey.features.modules.Module;
-import me.alpha432.oyvey.features.setting.Setting;
-import me.alpha432.oyvey.util.BlockUtil;
+import me.hk.azorius.features.modules.Module;
+import me.hk.azorius.features.setting.Setting;
+import me.hk.azorius.util.BlockUtil;
 import net.minecraft.init.Blocks;
 import net.minecraft.network.play.client.CPacketPlayer;
 import net.minecraft.util.EnumHand;

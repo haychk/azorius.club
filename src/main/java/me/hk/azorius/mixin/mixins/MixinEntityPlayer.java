@@ -1,8 +1,8 @@
-package me.alpha432.oyvey.mixin.mixins;
+package me.hk.azorius.mixin.mixins;
 
 import com.mojang.authlib.GameProfile;
-import me.alpha432.oyvey.OyVey;
-import me.alpha432.oyvey.features.modules.player.TpsSync;
+import me.hk.azorius.Azorius;
+import me.hk.azorius.features.modules.player.TpsSync;
 import net.minecraft.entity.EntityLivingBase;
 import net.minecraft.entity.SharedMonsterAttributes;
 import net.minecraft.entity.player.EntityPlayer;
@@ -22,7 +22,7 @@ public abstract class MixinEntityPlayer
     @Inject(method={"getCooldownPeriod"}, at={@At(value="HEAD")}, cancellable=true)
     private void getCooldownPeriodHook(CallbackInfoReturnable<Float> callbackInfoReturnable) {
         if (TpsSync.getInstance().isOn() && TpsSync.getInstance().attack.getValue().booleanValue()) {
-            callbackInfoReturnable.setReturnValue(Float.valueOf((float)(1.0 / ((EntityPlayer)EntityPlayer.class.cast((Object)this)).getEntityAttribute(SharedMonsterAttributes.ATTACK_SPEED).getBaseValue() * 20.0 * (double)OyVey.serverManager.getTpsFactor())));
+            callbackInfoReturnable.setReturnValue(Float.valueOf((float)(1.0 / ((EntityPlayer)EntityPlayer.class.cast((Object)this)).getEntityAttribute(SharedMonsterAttributes.ATTACK_SPEED).getBaseValue() * 20.0 * (double)Azorius.serverManager.getTpsFactor())));
         }
     }
 }

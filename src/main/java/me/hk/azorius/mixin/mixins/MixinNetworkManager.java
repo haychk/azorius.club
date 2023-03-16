@@ -1,7 +1,7 @@
-package me.alpha432.oyvey.mixin.mixins;
+package me.hk.azorius.mixin.mixins;
 
 import io.netty.channel.ChannelHandlerContext;
-import me.alpha432.oyvey.event.events.PacketEvent;
+import me.hk.azorius.event.events.PacketEvent;
 import net.minecraft.network.NetworkManager;
 import net.minecraft.network.Packet;
 import net.minecraftforge.common.MinecraftForge;

@@ -57,7 +57,7 @@ public class Component
         if (this.open) {
             RenderUtil.drawRect(this.x, (float) this.y + 12.5f, this.x + this.width, (float) (this.y + this.height) + totalItemHeight, 0x77000000);
         }
-        OyVey.textManager.drawStringWithShadow(this.getName(), (float) this.x + 3.0f, (float) this.y - 4.0f - (float) me.hk.azorius.features.gui.AzoriusGui.getClickGui().getTextOffset(), -1);
+        Azorius.textManager.drawStringWithShadow(this.getName(), (float) this.x + 3.0f, (float) this.y - 4.0f - (float) me.hk.azorius.features.gui.AzoriusGui.getClickGui().getTextOffset(), -1);
         if (this.open) {
             float y = (float) (this.getY() + this.getHeight()) - 3.0f;
             for (Item item : this.getItems()) {

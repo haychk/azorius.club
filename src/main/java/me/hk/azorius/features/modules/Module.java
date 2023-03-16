@@ -5,11 +5,11 @@ import me.hk.azorius.Azorius;
 import me.hk.azorius.event.events.ClientEvent;
 import me.hk.azorius.event.events.Render2DEvent;
 import me.hk.azorius.event.events.Render3DEvent;
-import me.alpha432.oyvey.features.Feature;
-import me.alpha432.oyvey.features.command.Command;
-import me.alpha432.oyvey.features.modules.client.HUD;
-import me.alpha432.oyvey.features.setting.Bind;
-import me.alpha432.oyvey.features.setting.Setting;
+import me.hk.azorius.features.Feature;
+import me.hk.azorius.features.command.Command;
+import me.hk.azorius.features.modules.client.HUD;
+import me.hk.azorius.features.setting.Bind;
+import me.hk.azorius.features.setting.Setting;
 import net.minecraft.util.text.TextComponentString;
 import net.minecraftforge.common.MinecraftForge;
 

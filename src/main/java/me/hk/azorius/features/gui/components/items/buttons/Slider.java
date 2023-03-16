@@ -1,11 +1,11 @@
-package me.alpha432.oyvey.features.gui.components.items.buttons;
+package me.hk.azorius.features.gui.components.items.buttons;
 
 import com.mojang.realmsclient.gui.ChatFormatting;
-import me.alpha432.oyvey.OyVey;
-import me.alpha432.oyvey.features.gui.components.Component;
-import me.alpha432.oyvey.features.modules.client.ClickGui;
-import me.alpha432.oyvey.features.setting.Setting;
-import me.alpha432.oyvey.util.RenderUtil;
+import me.hk.azorius.Azorius;
+import me.hk.azorius.features.gui.components.Component;
+import me.hk.azorius.features.modules.client.ClickGui;
+import me.hk.azorius.features.setting.Setting;
+import me.hk.azorius.util.RenderUtil;
 import org.lwjgl.input.Mouse;
 
 public class Slider
@@ -28,8 +28,8 @@ public class Slider
     public void drawScreen(int mouseX, int mouseY, float partialTicks) {
         this.dragSetting(mouseX, mouseY);
         RenderUtil.drawRect(this.x, this.y, this.x + (float) this.width + 7.4f, this.y + (float) this.height - 0.5f, !this.isHovering(mouseX, mouseY) ? 0x11555555 : -2007673515);
-        RenderUtil.drawRect(this.x, this.y, ((Number) this.setting.getValue()).floatValue() <= this.min.floatValue() ? this.x : this.x + ((float) this.width + 7.4f) * this.partialMultiplier(), this.y + (float) this.height - 0.5f, !this.isHovering(mouseX, mouseY) ? OyVey.colorManager.getColorWithAlpha(OyVey.moduleManager.getModuleByClass(ClickGui.class).hoverAlpha.getValue()) : OyVey.colorManager.getColorWithAlpha(OyVey.moduleManager.getModuleByClass(ClickGui.class).alpha.getValue()));
-        OyVey.textManager.drawStringWithShadow(this.getName() + " " + ChatFormatting.GRAY + (this.setting.getValue() instanceof Float ? this.setting.getValue() : Double.valueOf(((Number) this.setting.getValue()).doubleValue())), this.x + 2.3f, this.y - 1.7f - (float) me.alpha432.oyvey.features.gui.AzoriusGui.getClickGui().getTextOffset(), -1);
+        RenderUtil.drawRect(this.x, this.y, ((Number) this.setting.getValue()).floatValue() <= this.min.floatValue() ? this.x : this.x + ((float) this.width + 7.4f) * this.partialMultiplier(), this.y + (float) this.height - 0.5f, !this.isHovering(mouseX, mouseY) ? Azorius.colorManager.getColorWithAlpha(Azorius.moduleManager.getModuleByClass(ClickGui.class).hoverAlpha.getValue()) : Azorius.colorManager.getColorWithAlpha(Azorius.moduleManager.getModuleByClass(ClickGui.class).alpha.getValue()));
+        Azorius.textManager.drawStringWithShadow(this.getName() + " " + ChatFormatting.GRAY + (this.setting.getValue() instanceof Float ? this.setting.getValue() : Double.valueOf(((Number) this.setting.getValue()).doubleValue())), this.x + 2.3f, this.y - 1.7f - (float) me.hk.azorius.features.gui.AzoriusGui.getClickGui().getTextOffset(), -1);
     }
 
     @Override
@@ -42,7 +42,7 @@ public class Slider
 
     @Override
     public boolean isHovering(int mouseX, int mouseY) {
-        for (Component component : me.alpha432.oyvey.features.gui.AzoriusGui.getClickGui().getComponents()) {
+        for (Component component : me.hk.azorius.features.gui.AzoriusGui.getClickGui().getComponents()) {
             if (!component.drag) continue;
             return false;
         }

@@ -1,8 +1,8 @@
-package me.alpha432.oyvey.features.modules.misc;
+package me.hk.azorius.features.modules.misc;
 
 import com.mojang.realmsclient.gui.ChatFormatting;
-import me.alpha432.oyvey.features.command.Command;
-import me.alpha432.oyvey.features.modules.Module;
+import me.hk.azorius.features.command.Command;
+import me.hk.azorius.features.modules.Module;
 import net.minecraft.entity.player.EntityPlayer;
 
 import java.util.HashMap;

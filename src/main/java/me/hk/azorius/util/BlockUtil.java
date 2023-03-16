@@ -171,7 +171,7 @@ public class BlockUtil
             sneaking = true;
         }
         if (rotate) {
-            OyVey.rotationManager.lookAtVec3d(hitVec);
+            Azorius.rotationManager.lookAtVec3d(hitVec);
         }
         BlockUtil.rightClickBlock(neighbour, hitVec, hand, opposite, packet);
         BlockUtil.mc.player.swingArm(EnumHand.MAIN_HAND);

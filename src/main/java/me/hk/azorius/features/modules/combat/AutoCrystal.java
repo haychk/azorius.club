@@ -1,14 +1,14 @@
-package me.alpha432.oyvey.features.modules.combat;
+package me.hk.azorius.features.modules.combat;
 
-import me.alpha432.oyvey.OyVey;
-import me.alpha432.oyvey.event.events.PacketEvent;
-import me.alpha432.oyvey.event.events.Render3DEvent;
-import me.alpha432.oyvey.features.modules.Module;
-import me.alpha432.oyvey.features.modules.client.ClickGui;
-import me.alpha432.oyvey.features.modules.misc.AutoGG;
-import me.alpha432.oyvey.features.setting.Setting;
-import me.alpha432.oyvey.util.Timer;
-import me.alpha432.oyvey.util.*;
+import me.hk.azorius.Azorius;
+import me.hk.azorius.event.events.PacketEvent;
+import me.hk.azorius.event.events.Render3DEvent;
+import me.hk.azorius.features.modules.Module;
+import me.hk.azorius.features.modules.client.ClickGui;
+import me.hk.azorius.features.modules.misc.AutoGG;
+import me.hk.azorius.features.setting.Setting;
+import me.hk.azorius.util.Timer;
+import me.hk.azorius.util.*;
 import net.minecraft.enchantment.EnchantmentHelper;
 import net.minecraft.entity.Entity;
 import net.minecraft.entity.EntityLivingBase;
@@ -290,7 +290,7 @@ public class AutoCrystal
             }
             this.realTarget = this.target;
             if (AutoGG.getINSTANCE().isOn()) {
-                AutoGG autoGG = (AutoGG) OyVey.moduleManager.getModuleByName("AutoGG");
+                AutoGG autoGG = (AutoGG) Azorius.moduleManager.getModuleByName("AutoGG");
                 autoGG.addTargetedPlayer(this.target.getName());
             }
             if (this.hotBarSlot != -1 && this.autoswitch.getValue().booleanValue() && !AutoCrystal.mc.player.isPotionActive(MobEffects.WEAKNESS)) {
@@ -416,7 +416,7 @@ public class AutoCrystal
     EntityPlayer getTarget() {
         EntityPlayer closestPlayer = null;
         for (EntityPlayer entity : AutoCrystal.mc.world.playerEntities) {
-            if (AutoCrystal.mc.player == null || AutoCrystal.mc.player.isDead || entity.isDead || entity == AutoCrystal.mc.player || OyVey.friendManager.isFriend(entity.getName()) || entity.getDistance(AutoCrystal.mc.player) > 12.0f)
+            if (AutoCrystal.mc.player == null || AutoCrystal.mc.player.isDead || entity.isDead || entity == AutoCrystal.mc.player || Azorius.friendManager.isFriend(entity.getName()) || entity.getDistance(AutoCrystal.mc.player) > 12.0f)
                 continue;
             this.armorTarget = false;
             for (ItemStack is : entity.getArmorInventoryList()) {

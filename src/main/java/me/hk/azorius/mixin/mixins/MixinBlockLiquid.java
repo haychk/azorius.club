@@ -1,6 +1,6 @@
 package me.hk.azorius.mixin.mixins;
 
-import me.alpha432.oyvey.features.modules.player.LiquidInteract;
+import me.hk.azorius.features.modules.player.LiquidInteract;
 import net.minecraft.block.Block;
 import net.minecraft.block.BlockLiquid;
 import net.minecraft.block.material.Material;

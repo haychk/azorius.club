@@ -1,11 +1,11 @@
-package me.alpha432.oyvey.features.modules.combat;
+package me.hk.azorius.features.modules.combat;
 
 import com.mojang.realmsclient.gui.ChatFormatting;
-import me.alpha432.oyvey.OyVey;
-import me.alpha432.oyvey.features.command.Command;
-import me.alpha432.oyvey.features.modules.Module;
-import me.alpha432.oyvey.features.setting.Setting;
-import me.alpha432.oyvey.util.*;
+import me.hk.azorius.Azorius;
+import me.hk.azorius.features.command.Command;
+import me.hk.azorius.features.modules.Module;
+import me.hk.azorius.features.setting.Setting;
+import me.hk.azorius.util.*;
 import net.minecraft.block.BlockWeb;
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.util.EnumHand;
@@ -139,7 +139,7 @@ public class AutoWeb
         EntityPlayer target = null;
         double distance = Math.pow(range, 2.0) + 1.0;
         for (EntityPlayer player : AutoWeb.mc.world.playerEntities) {
-            if (EntityUtil.isntValid(player, range) || player.isInWeb || OyVey.speedManager.getPlayerSpeed(player) > 30.0)
+            if (EntityUtil.isntValid(player, range) || player.isInWeb || Azorius.speedManager.getPlayerSpeed(player) > 30.0)
                 continue;
             if (target == null) {
                 target = player;

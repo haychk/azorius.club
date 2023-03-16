@@ -1,14 +1,14 @@
-package me.alpha432.oyvey.features.modules.combat;
+package me.hk.azorius.features.modules.combat;
 
 import com.mojang.realmsclient.gui.ChatFormatting;
-import me.alpha432.oyvey.OyVey;
-import me.alpha432.oyvey.features.command.Command;
-import me.alpha432.oyvey.features.modules.Module;
-import me.alpha432.oyvey.features.setting.Setting;
-import me.alpha432.oyvey.util.BlockUtil;
-import me.alpha432.oyvey.util.EntityUtil;
-import me.alpha432.oyvey.util.InventoryUtil;
-import me.alpha432.oyvey.util.Timer;
+import me.hk.azorius.Azorius;
+import me.hk.azorius.features.command.Command;
+import me.hk.azorius.features.modules.Module;
+import me.hk.azorius.features.setting.Setting;
+import me.hk.azorius.util.BlockUtil;
+import me.hk.azorius.util.EntityUtil;
+import me.hk.azorius.util.InventoryUtil;
+import me.hk.azorius.util.Timer;
 import net.minecraft.block.BlockEnderChest;
 import net.minecraft.block.BlockObsidian;
 import net.minecraft.util.EnumHand;
@@ -52,7 +52,7 @@ public class Surround
         this.lastHotbarSlot = Surround.mc.player.inventory.currentItem;
         this.startPos = EntityUtil.getRoundedBlockPos(Surround.mc.player);
         if (this.center.getValue().booleanValue()) {
-            OyVey.positionManager.setPositionPacket((double) this.startPos.getX() + 0.5, this.startPos.getY(), (double) this.startPos.getZ() + 0.5, true, true, true);
+            Azorius.positionManager.setPositionPacket((double) this.startPos.getX() + 0.5, this.startPos.getY(), (double) this.startPos.getZ() + 0.5, true, true, true);
         }
         this.retries.clear();
         this.retryTimer.reset();
@@ -154,7 +154,7 @@ public class Surround
                         this.retryTimer.reset();
                         continue block5;
                     }
-                    if (OyVey.speedManager.getSpeedKpH() != 0.0 || isExtending || this.extenders >= 1) continue block5;
+                    if (Azorius.speedManager.getSpeedKpH() != 0.0 || isExtending || this.extenders >= 1) continue block5;
                     this.placeBlocks(Surround.mc.player.getPositionVector().add(vec3d), EntityUtil.getUnsafeBlockArrayFromVec3d(Surround.mc.player.getPositionVector().add(vec3d), 0, true), hasHelpingBlocks, false, true);
                     this.extendingBlocks.add(vec3d);
                     ++this.extenders;

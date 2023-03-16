@@ -1,6 +1,6 @@
-package me.alpha432.oyvey.features.gui.components.items;
+package me.hk.azorius.features.gui.components.items;
 
-import me.alpha432.oyvey.features.Feature;
+import me.hk.azorius.features.Feature;
 
 public class Item
         extends Feature {

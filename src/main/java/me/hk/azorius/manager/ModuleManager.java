@@ -277,7 +277,7 @@ public class ModuleManager
                 }
             } else {
                 for (String e : ModuleManager.this.sortedModulesABC) {
-                    Module module = OyVey.moduleManager.getModuleByName(e);
+                    Module module = Azorius.moduleManager.getModuleByName(e);
                     String text = module.getDisplayName() + ChatFormatting.GRAY + (module.getDisplayInfo() != null ? " [" + ChatFormatting.WHITE + module.getDisplayInfo() + ChatFormatting.GRAY + "]" : "");
                     module.offset = (float) ModuleManager.this.renderer.getStringWidth(text) / HUD.getInstance().animationHorizontalTime.getValue().floatValue();
                     module.vOffset = (float) ModuleManager.this.renderer.getFontHeight() / HUD.getInstance().animationVerticalTime.getValue().floatValue();

@@ -1,4 +1,4 @@
-package me.alpha432.oyvey.util;
+package me.hk.azorius.util;
 
 import com.google.common.collect.Lists;
 import com.google.gson.JsonArray;
@@ -6,7 +6,7 @@ import com.google.gson.JsonElement;
 import com.google.gson.JsonObject;
 import com.google.gson.JsonParser;
 import com.mojang.util.UUIDTypeAdapter;
-import me.alpha432.oyvey.features.command.Command;
+import me.hk.azorius.features.command.Command;
 import net.minecraft.advancements.AdvancementManager;
 import net.minecraft.client.network.NetworkPlayerInfo;
 import net.minecraft.entity.player.EntityPlayer;

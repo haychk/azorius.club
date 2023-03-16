@@ -1,8 +1,8 @@
 package me.hk.azorius.event.events;
 
 import me.hk.azorius.event.EventStage;
-import me.alpha432.oyvey.features.Feature;
-import me.alpha432.oyvey.features.setting.Setting;
+import me.hk.azorius.features.Feature;
+import me.hk.azorius.features.setting.Setting;
 import net.minecraftforge.fml.common.eventhandler.Cancelable;
 
 @Cancelable

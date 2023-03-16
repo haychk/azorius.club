@@ -1,8 +1,8 @@
-package me.alpha432.oyvey.manager;
+package me.hk.azorius.manager;
 
-import me.alpha432.oyvey.features.Feature;
-import me.alpha432.oyvey.features.setting.Setting;
-import me.alpha432.oyvey.util.PlayerUtil;
+import me.hk.azorius.features.Feature;
+import me.hk.azorius.features.setting.Setting;
+import me.hk.azorius.util.PlayerUtil;
 import net.minecraft.entity.player.EntityPlayer;
 
 import java.util.ArrayList;
