@@ -1,6 +1,6 @@
-package me.alpha432.oyvey.mixin.mixins;
+package me.hk.azorius.mixin.mixins;
 
-import me.alpha432.oyvey.features.modules.misc.ToolTips;
+import me.hk.azorius.features.modules.misc.ToolTips;
 import net.minecraft.client.gui.Gui;
 import net.minecraft.client.gui.GuiScreen;
 import net.minecraft.item.ItemShulkerBox;

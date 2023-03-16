@@ -1,8 +1,8 @@
-package me.alpha432.oyvey.manager;
+package me.hk.azorius.manager;
 
-import me.alpha432.oyvey.OyVey;
-import me.alpha432.oyvey.features.Feature;
-import me.alpha432.oyvey.features.modules.Module;
+import me.hk.azorius.Azorius;
+import me.hk.azorius.features.Feature;
+import me.hk.azorius.features.modules.Module;
 
 import java.io.File;
 import java.io.IOException;
@@ -19,12 +19,12 @@ import java.util.stream.Stream;
 
 public class FileManager
         extends Feature {
-    private final Path base = this.getMkDirectory(this.getRoot(), "oyvey");
+    private final Path base = this.getMkDirectory(this.getRoot(), "Azorius");
     private final Path config = this.getMkDirectory(this.base, "config");
 
     public FileManager() {
         this.getMkDirectory(this.base, "pvp");
-        for (Module.Category category : OyVey.moduleManager.getCategories()) {
+        for (Module.Category category : Azorius.moduleManager.getCategories()) {
             this.getMkDirectory(this.config, category.getName());
         }
     }

@@ -1,9 +1,9 @@
-package me.alpha432.oyvey.mixin.mixins;
+package me.hk.azorius.mixin.mixins;
 
-import me.alpha432.oyvey.features.modules.client.ClickGui;
-import me.alpha432.oyvey.features.modules.render.HandChams;
-import me.alpha432.oyvey.features.modules.render.SmallShield;
-import me.alpha432.oyvey.util.ColorUtil;
+import me.hk.azorius.features.modules.client.ClickGui;
+import me.hk.azorius.features.modules.render.HandChams;
+import me.hk.azorius.features.modules.render.SmallShield;
+import me.hk.azorius.util.ColorUtil;
 import net.minecraft.client.Minecraft;
 import net.minecraft.client.entity.AbstractClientPlayer;
 import net.minecraft.client.renderer.GlStateManager;

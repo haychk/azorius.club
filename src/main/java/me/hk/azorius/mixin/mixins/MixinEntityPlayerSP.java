@@ -1,7 +1,7 @@
-package me.alpha432.oyvey.mixin.mixins;
+package me.hk.azorius.mixin.mixins;
 
-import me.alpha432.oyvey.event.events.ChatEvent;
-import me.alpha432.oyvey.event.events.UpdateWalkingPlayerEvent;
+import me.hk.azorius.event.events.ChatEvent;
+import me.hk.azorius.event.events.UpdateWalkingPlayerEvent;
 import net.minecraft.client.Minecraft;
 import net.minecraft.client.entity.AbstractClientPlayer;
 import net.minecraft.client.entity.EntityPlayerSP;

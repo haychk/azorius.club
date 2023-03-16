@@ -1,7 +1,7 @@
-package me.alpha432.oyvey.features.modules.player;
+package me.hk.azorius.features.modules.player;
 
-import me.alpha432.oyvey.features.modules.Module;
-import me.alpha432.oyvey.features.setting.Setting;
+import me.hk.azorius.features.modules.Module;
+import me.hk.azorius.features.setting.Setting;
 
 public class TpsSync
         extends Module {

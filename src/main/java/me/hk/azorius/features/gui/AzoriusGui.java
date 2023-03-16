@@ -1,11 +1,11 @@
-package me.alpha432.oyvey.features.gui;
+package me.hk.azorius.features.gui;
 
-import me.alpha432.oyvey.OyVey;
-import me.alpha432.oyvey.features.Feature;
-import me.alpha432.oyvey.features.gui.components.Component;
-import me.alpha432.oyvey.features.gui.components.items.Item;
-import me.alpha432.oyvey.features.gui.components.items.buttons.ModuleButton;
-import me.alpha432.oyvey.features.modules.Module;
+import me.hk.azorius.Azorius;
+import me.hk.azorius.features.Feature;
+import me.hk.azorius.features.gui.components.Component;
+import me.hk.azorius.features.gui.components.items.Item;
+import me.hk.azorius.features.gui.components.items.buttons.ModuleButton;
+import me.hk.azorius.features.modules.Module;
 import net.minecraft.client.gui.GuiScreen;
 import org.lwjgl.input.Mouse;
 
@@ -15,11 +15,11 @@ import java.util.Comparator;
 
 public class AzoriusGui
         extends GuiScreen {
-    private static me.alpha432.oyvey.features.gui.AzoriusGui oyveyGui;
-    private static me.alpha432.oyvey.features.gui.AzoriusGui INSTANCE;
+    private static me.hk.azorius.features.gui.AzoriusGui azoriusGui;
+    private static me.hk.azorius.features.gui.AzoriusGui INSTANCE;
 
     static {
-        INSTANCE = new me.alpha432.oyvey.features.gui.AzoriusGui();
+        INSTANCE = new me.hk.azorius.features.gui.AzoriusGui();
     }
 
     private final ArrayList<Component> components = new ArrayList();
@@ -29,15 +29,15 @@ public class AzoriusGui
         this.load();
     }
 
-    public static me.alpha432.oyvey.features.gui.AzoriusGui getInstance() {
+    public static me.hk.azorius.features.gui.AzoriusGui getInstance() {
         if (INSTANCE == null) {
-            INSTANCE = new me.alpha432.oyvey.features.gui.AzoriusGui();
+            INSTANCE = new me.hk.azorius.features.gui.AzoriusGui();
         }
         return INSTANCE;
     }
 
-    public static me.alpha432.oyvey.features.gui.AzoriusGui getClickGui() {
-        return me.alpha432.oyvey.features.gui.AzoriusGui.getInstance();
+    public static me.hk.azorius.features.gui.AzoriusGui getClickGui() {
+        return me.hk.azorius.features.gui.AzoriusGui.getInstance();
     }
 
     private void setInstance() {
@@ -46,13 +46,13 @@ public class AzoriusGui
 
     private void load() {
         int x = -84;
-        for (final Module.Category category : OyVey.moduleManager.getCategories()) {
+        for (final Module.Category category : Azorius.moduleManager.getCategories()) {
             this.components.add(new Component(category.getName(), x += 90, 4, true) {
 
                 @Override
                 public void setupItems() {
                     counter1 = new int[]{1};
-                    OyVey.moduleManager.getModulesByCategory(category).forEach(module -> {
+                    Azorius.moduleManager.getModulesByCategory(category).forEach(module -> {
                         if (!module.hidden) {
                             this.addButton(new ModuleButton(module));
                         }

@@ -1,9 +1,9 @@
-package me.alpha432.oyvey.features.modules.misc;
+package me.hk.azorius.features.modules.misc;
 
 import com.mojang.realmsclient.gui.ChatFormatting;
-import me.alpha432.oyvey.OyVey;
-import me.alpha432.oyvey.features.command.Command;
-import me.alpha432.oyvey.features.modules.Module;
+import me.hk.azorius.Azorius;
+import me.hk.azorius.features.command.Command;
+import me.hk.azorius.features.modules.Module;
 import net.minecraft.entity.Entity;
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.util.math.RayTraceResult;
@@ -33,11 +33,11 @@ public class MCF
         Entity entity;
         RayTraceResult result = MCF.mc.objectMouseOver;
         if (result != null && result.typeOfHit == RayTraceResult.Type.ENTITY && (entity = result.entityHit) instanceof EntityPlayer) {
-            if (OyVey.friendManager.isFriend(entity.getName())) {
-                OyVey.friendManager.removeFriend(entity.getName());
+            if (Azorius.friendManager.isFriend(entity.getName())) {
+                Azorius.friendManager.removeFriend(entity.getName());
                 Command.sendMessage(ChatFormatting.RED + entity.getName() + ChatFormatting.RED + " has been unfriended.");
             } else {
-                OyVey.friendManager.addFriend(entity.getName());
+                Azorius.friendManager.addFriend(entity.getName());
                 Command.sendMessage(ChatFormatting.AQUA + entity.getName() + ChatFormatting.AQUA + " has been friended.");
             }
         }

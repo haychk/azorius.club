@@ -1,11 +1,11 @@
 package me.hk.azorius.features;
 
 import me.hk.azorius.Azorius;
-import me.alpha432.oyvey.features.gui.AzoriusGui;
+import me.hk.azorius.features.gui.AzoriusGui;
 import me.hk.azorius.features.modules.Module;
 import me.hk.azorius.features.setting.Setting;
-import me.alpha432.oyvey.manager.TextManager;
-import me.alpha432.oyvey.util.Util;
+import me.hk.azorius.manager.TextManager;
+import me.hk.azorius.util.Util;
 
 import java.util.ArrayList;
 import java.util.List;

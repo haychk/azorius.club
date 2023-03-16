@@ -1,11 +1,11 @@
-package me.alpha432.oyvey.features.modules.misc;
+package me.hk.azorius.features.modules.misc;
 
-import me.alpha432.oyvey.event.events.DeathEvent;
-import me.alpha432.oyvey.features.command.Command;
-import me.alpha432.oyvey.features.modules.Module;
-import me.alpha432.oyvey.features.modules.client.HUD;
-import me.alpha432.oyvey.util.EntityUtil;
-import me.alpha432.oyvey.util.TextUtil;
+import me.hk.azorius.event.events.DeathEvent;
+import me.hk.azorius.features.command.Command;
+import me.hk.azorius.features.modules.Module;
+import me.hk.azorius.features.modules.client.HUD;
+import me.hk.azorius.util.EntityUtil;
+import me.hk.azorius.util.TextUtil;
 import net.minecraft.entity.Entity;
 import net.minecraft.entity.item.EntityExpBottle;
 import net.minecraft.entity.player.EntityPlayer;

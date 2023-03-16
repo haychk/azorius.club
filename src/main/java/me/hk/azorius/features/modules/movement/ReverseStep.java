@@ -1,7 +1,7 @@
-package me.alpha432.oyvey.features.modules.movement;
+package me.hk.azorius.features.modules.movement;
 
-import me.alpha432.oyvey.features.modules.Module;
-import me.alpha432.oyvey.features.setting.Setting;
+import me.hk.azorius.features.modules.Module;
+import me.hk.azorius.features.setting.Setting;
 import net.minecraft.block.state.IBlockState;
 import net.minecraft.init.Blocks;
 import net.minecraft.util.math.BlockPos;

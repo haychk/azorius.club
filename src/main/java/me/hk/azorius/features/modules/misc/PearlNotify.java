@@ -2,12 +2,12 @@
 // Decompiled by Procyon v0.5.36
 //
 
-package me.alpha432.oyvey.features.modules.misc;
+package me.hk.azorius.features.modules.misc;
 
 import com.mojang.realmsclient.gui.ChatFormatting;
-import me.alpha432.oyvey.OyVey;
-import me.alpha432.oyvey.features.command.Command;
-import me.alpha432.oyvey.features.modules.Module;
+import me.hk.azorius.Azorius;
+import me.hk.azorius.features.command.Command;
+import me.hk.azorius.features.modules.Module;
 import net.minecraft.entity.Entity;
 import net.minecraft.entity.item.EntityEnderPearl;
 import net.minecraft.entity.player.EntityPlayer;
@@ -67,7 +67,7 @@ public class PearlNotify extends Module {
             } else if (faceing.equals("east")) {
                 faceing = "west";
             }
-            Command.sendMessage(OyVey.friendManager.isFriend(closestPlayer.getName()) ? (ChatFormatting.AQUA + closestPlayer.getName() + ChatFormatting.DARK_GRAY + " has just thrown a pearl heading " + faceing + "!") : (ChatFormatting.RED + closestPlayer.getName() + ChatFormatting.DARK_GRAY + " has just thrown a pearl heading " + faceing + "!"));
+            Command.sendMessage(Azorius.friendManager.isFriend(closestPlayer.getName()) ? (ChatFormatting.AQUA + closestPlayer.getName() + ChatFormatting.DARK_GRAY + " has just thrown a pearl heading " + faceing + "!") : (ChatFormatting.RED + closestPlayer.getName() + ChatFormatting.DARK_GRAY + " has just thrown a pearl heading " + faceing + "!"));
             this.flag = false;
         }
     }

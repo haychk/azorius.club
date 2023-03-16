@@ -1,14 +1,14 @@
-package me.alpha432.oyvey.features.modules.player;
+package me.hk.azorius.features.modules.player;
 
-import me.alpha432.oyvey.OyVey;
-import me.alpha432.oyvey.event.events.BlockEvent;
-import me.alpha432.oyvey.event.events.Render3DEvent;
-import me.alpha432.oyvey.features.modules.Module;
-import me.alpha432.oyvey.features.setting.Setting;
-import me.alpha432.oyvey.util.BlockUtil;
-import me.alpha432.oyvey.util.InventoryUtil;
-import me.alpha432.oyvey.util.RenderUtil;
-import me.alpha432.oyvey.util.Timer;
+import me.hk.azorius.Azorius;
+import me.hk.azorius.event.events.BlockEvent;
+import me.hk.azorius.event.events.Render3DEvent;
+import me.hk.azorius.features.modules.Module;
+import me.hk.azorius.features.setting.Setting;
+import me.hk.azorius.util.BlockUtil;
+import me.hk.azorius.util.InventoryUtil;
+import me.hk.azorius.util.RenderUtil;
+import me.hk.azorius.util.Timer;
 import net.minecraft.block.state.IBlockState;
 import net.minecraft.init.Blocks;
 import net.minecraft.item.ItemPickaxe;
@@ -75,7 +75,7 @@ public class Speedmine
     @Override
     public void onRender3D(Render3DEvent event) {
         if (this.render.getValue().booleanValue() && this.currentPos != null && this.currentBlockState.getBlock() == Blocks.OBSIDIAN) {
-            Color color = new Color(this.timer.passedMs((int) (2000.0f * OyVey.serverManager.getTpsFactor())) ? 0 : 255, this.timer.passedMs((int) (2000.0f * OyVey.serverManager.getTpsFactor())) ? 255 : 0, 0, 255);
+            Color color = new Color(this.timer.passedMs((int) (2000.0f * Azorius.serverManager.getTpsFactor())) ? 0 : 255, this.timer.passedMs((int) (2000.0f * Azorius.serverManager.getTpsFactor())) ? 255 : 0, 0, 255);
             RenderUtil.drawBoxESP(this.currentPos, color, false, color, this.lineWidth.getValue().floatValue(), this.outline.getValue(), this.box.getValue(), this.boxAlpha.getValue(), false);
         }
     }

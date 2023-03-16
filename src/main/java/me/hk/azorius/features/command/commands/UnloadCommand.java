@@ -1,7 +1,7 @@
-package me.alpha432.oyvey.features.command.commands;
+package me.hk.azorius.features.command.commands;
 
-import me.alpha432.oyvey.OyVey;
-import me.alpha432.oyvey.features.command.Command;
+import me.hk.azorius.Azorius;
+import me.hk.azorius.features.command.Command;
 
 public class UnloadCommand
         extends Command {
@@ -11,7 +11,7 @@ public class UnloadCommand
 
     @Override
     public void execute(String[] commands) {
-        OyVey.unload(true);
+        Azorius.unload(true);
     }
 }
 

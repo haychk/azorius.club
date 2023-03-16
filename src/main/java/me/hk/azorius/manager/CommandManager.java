@@ -1,9 +1,9 @@
 package me.hk.azorius.manager;
 
 import com.mojang.realmsclient.gui.ChatFormatting;
-import me.alpha432.oyvey.features.Feature;
-import me.alpha432.oyvey.features.command.Command;
-import me.alpha432.oyvey.features.command.commands.*;
+import me.hk.azorius.features.Feature;
+import me.hk.azorius.features.command.Command;
+import me.hk.azorius.features.command.commands.*;
 
 import java.util.ArrayList;
 import java.util.LinkedList;
@@ -11,7 +11,7 @@ import java.util.LinkedList;
 public class CommandManager
         extends Feature {
     private final ArrayList<Command> commands = new ArrayList();
-    private String clientMessage = "<OyVey>";
+    private String clientMessage = "<azorius.club>";
     private String prefix = ".";
 
     public CommandManager() {

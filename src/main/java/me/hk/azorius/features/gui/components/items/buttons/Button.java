@@ -1,10 +1,10 @@
-package me.alpha432.oyvey.features.gui.components.items.buttons;
+package me.hk.azorius.features.gui.components.items.buttons;
 
-import me.alpha432.oyvey.OyVey;
-import me.alpha432.oyvey.features.gui.components.Component;
-import me.alpha432.oyvey.features.gui.components.items.Item;
-import me.alpha432.oyvey.features.modules.client.ClickGui;
-import me.alpha432.oyvey.util.RenderUtil;
+import me.hk.azorius.Azorius;
+import me.hk.azorius.features.gui.components.Component;
+import me.hk.azorius.features.gui.components.items.Item;
+import me.hk.azorius.features.modules.client.ClickGui;
+import me.hk.azorius.util.RenderUtil;
 import net.minecraft.client.audio.PositionedSoundRecord;
 import net.minecraft.init.SoundEvents;
 
@@ -19,8 +19,8 @@ public class Button
 
     @Override
     public void drawScreen(int mouseX, int mouseY, float partialTicks) {
-        RenderUtil.drawRect(this.x, this.y, this.x + (float) this.width, this.y + (float) this.height - 0.5f, this.getState() ? (!this.isHovering(mouseX, mouseY) ? OyVey.colorManager.getColorWithAlpha(OyVey.moduleManager.getModuleByClass(ClickGui.class).hoverAlpha.getValue()) : OyVey.colorManager.getColorWithAlpha(OyVey.moduleManager.getModuleByClass(ClickGui.class).alpha.getValue())) : (!this.isHovering(mouseX, mouseY) ? 0x11555555 : -2007673515));
-        OyVey.textManager.drawStringWithShadow(this.getName(), this.x + 2.3f, this.y - 2.0f - (float) me.alpha432.oyvey.features.gui.AzoriusGui.getClickGui().getTextOffset(), this.getState() ? -1 : -5592406);
+        RenderUtil.drawRect(this.x, this.y, this.x + (float) this.width, this.y + (float) this.height - 0.5f, this.getState() ? (!this.isHovering(mouseX, mouseY) ? Azorius.colorManager.getColorWithAlpha(Azorius.moduleManager.getModuleByClass(ClickGui.class).hoverAlpha.getValue()) : Azorius.colorManager.getColorWithAlpha(Azorius.moduleManager.getModuleByClass(ClickGui.class).alpha.getValue())) : (!this.isHovering(mouseX, mouseY) ? 0x11555555 : -2007673515));
+        Azorius.textManager.drawStringWithShadow(this.getName(), this.x + 2.3f, this.y - 2.0f - (float) me.hk.azorius.features.gui.AzoriusGui.getClickGui().getTextOffset(), this.getState() ? -1 : -5592406);
     }
 
     @Override
@@ -49,7 +49,7 @@ public class Button
     }
 
     public boolean isHovering(int mouseX, int mouseY) {
-        for (Component component : me.alpha432.oyvey.features.gui.AzoriusGui.getClickGui().getComponents()) {
+        for (Component component : me.hk.azorius.features.gui.AzoriusGui.getClickGui().getComponents()) {
             if (!component.drag) continue;
             return false;
         }

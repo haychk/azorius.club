@@ -1,8 +1,8 @@
-package me.alpha432.oyvey.manager;
+package me.hk.azorius.manager;
 
-import me.alpha432.oyvey.features.Feature;
-import me.alpha432.oyvey.util.MathUtil;
-import me.alpha432.oyvey.util.RotationUtil;
+import me.hk.azorius.features.Feature;
+import me.hk.azorius.util.MathUtil;
+import me.hk.azorius.util.RotationUtil;
 import net.minecraft.entity.Entity;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.util.math.Vec3d;

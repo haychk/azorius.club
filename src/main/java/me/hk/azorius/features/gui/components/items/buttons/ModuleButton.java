@@ -1,11 +1,11 @@
-package me.alpha432.oyvey.features.gui.components.items.buttons;
+package me.hk.azorius.features.gui.components.items.buttons;
 
-import me.alpha432.oyvey.features.gui.components.Component;
-import me.alpha432.oyvey.features.gui.components.items.Item;
-import me.alpha432.oyvey.features.modules.Module;
-import me.alpha432.oyvey.features.modules.client.HUD;
-import me.alpha432.oyvey.features.setting.Bind;
-import me.alpha432.oyvey.features.setting.Setting;
+import me.hk.azorius.features.gui.components.Component;
+import me.hk.azorius.features.gui.components.items.Item;
+import me.hk.azorius.features.modules.Module;
+import me.hk.azorius.features.modules.client.HUD;
+import me.hk.azorius.features.setting.Bind;
+import me.hk.azorius.features.setting.Setting;
 import net.minecraft.client.audio.PositionedSoundRecord;
 import net.minecraft.init.SoundEvents;
 import net.minecraft.util.ResourceLocation;
@@ -17,7 +17,7 @@ import java.util.List;
 public class ModuleButton
         extends Button {
     private final Module module;
-    private final ResourceLocation logo = new ResourceLocation("textures/oyvey.png");
+    private final ResourceLocation logo = new ResourceLocation("textures/Azorius.png");
     private List<Item> items = new ArrayList<Item>();
     private boolean subOpen;
 
@@ -74,7 +74,7 @@ public class ModuleButton
         if (!this.items.isEmpty()) {
             if (HUD.getInstance().magenDavid.getValue().booleanValue()) {
                 mc.getTextureManager().bindTexture(this.logo);
-                ModuleButton.drawCompleteImage(this.x - 1.5f + (float) this.width - 7.4f, this.y - 2.2f - (float) me.alpha432.oyvey.features.gui.AzoriusGui.getClickGui().getTextOffset(), 8, 8);
+                ModuleButton.drawCompleteImage(this.x - 1.5f + (float) this.width - 7.4f, this.y - 2.2f - (float) me.hk.azorius.features.gui.AzoriusGui.getClickGui().getTextOffset(), 8, 8);
             }
             if (this.subOpen) {
                 float height = 1.0f;

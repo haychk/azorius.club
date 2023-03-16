@@ -1,7 +1,7 @@
-package me.alpha432.oyvey.features.modules.player;
+package me.hk.azorius.features.modules.player;
 
-import me.alpha432.oyvey.features.modules.Module;
-import me.alpha432.oyvey.util.InventoryUtil;
+import me.hk.azorius.features.modules.Module;
+import me.hk.azorius.util.InventoryUtil;
 import net.minecraft.init.Items;
 import net.minecraft.item.ItemEnderPearl;
 import net.minecraft.util.EnumHand;

@@ -1,6 +1,6 @@
-package me.alpha432.oyvey.manager;
+package me.hk.azorius.manager;
 
-import me.alpha432.oyvey.util.Util;
+import me.hk.azorius.util.Util;
 import net.minecraft.network.play.client.CPacketHeldItemChange;
 
 public class InventoryManager

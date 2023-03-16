@@ -1,13 +1,13 @@
-package me.alpha432.oyvey.manager;
+package me.hk.azorius.manager;
 
 import com.google.gson.*;
-import me.alpha432.oyvey.OyVey;
-import me.alpha432.oyvey.features.Feature;
-import me.alpha432.oyvey.features.modules.Module;
-import me.alpha432.oyvey.features.setting.Bind;
-import me.alpha432.oyvey.features.setting.EnumConverter;
-import me.alpha432.oyvey.features.setting.Setting;
-import me.alpha432.oyvey.util.Util;
+import me.hk.azorius.Azorius;
+import me.hk.azorius.features.Feature;
+import me.hk.azorius.features.modules.Module;
+import me.hk.azorius.features.setting.Bind;
+import me.hk.azorius.features.setting.EnumConverter;
+import me.hk.azorius.features.setting.Setting;
+import me.hk.azorius.util.Util;
 
 import java.io.*;
 import java.nio.file.Files;
@@ -20,7 +20,7 @@ import java.util.stream.Collectors;
 public class ConfigManager implements Util {
     public ArrayList<Feature> features = new ArrayList<>();
 
-    public String config = "oyvey/config/";
+    public String config = "Azorius/config/";
 
     public static void setValueFromJson(Feature feature, Setting setting, JsonElement element) {
         String str;
@@ -53,7 +53,7 @@ public class ConfigManager implements Util {
                 }
                 return;
         }
-        OyVey.LOGGER.error("Unknown Setting type for: " + feature.getName() + " : " + setting.getName());
+        Azorius.LOGGER.error("Unknown Setting type for: " + feature.getName() + " : " + setting.getName());
     }
 
     private static void loadFile(JsonObject input, Feature feature) {
@@ -62,7 +62,7 @@ public class ConfigManager implements Util {
             JsonElement element = entry.getValue();
             if (feature instanceof FriendManager) {
                 try {
-                    OyVey.friendManager.addFriend(new FriendManager.Friend(element.getAsString(), UUID.fromString(settingName)));
+                    Azorius.friendManager.addFriend(new FriendManager.Friend(element.getAsString(), UUID.fromString(settingName)));
                 } catch (Exception e) {
                     e.printStackTrace();
                 }
@@ -84,13 +84,13 @@ public class ConfigManager implements Util {
     }
 
     public void loadConfig(String name) {
-        final List<File> files = Arrays.stream(Objects.requireNonNull(new File("oyvey").listFiles())).filter(File::isDirectory).collect(Collectors.toList());
-        if (files.contains(new File("oyvey/" + name + "/"))) {
-            this.config = "oyvey/" + name + "/";
+        final List<File> files = Arrays.stream(Objects.requireNonNull(new File("Azorius").listFiles())).filter(File::isDirectory).collect(Collectors.toList());
+        if (files.contains(new File("Azorius/" + name + "/"))) {
+            this.config = "Azorius/" + name + "/";
         } else {
-            this.config = "oyvey/config/";
+            this.config = "Azorius/config/";
         }
-        OyVey.friendManager.onLoad();
+        Azorius.friendManager.onLoad();
         for (Feature feature : this.features) {
             try {
                 loadSettings(feature);
@@ -102,16 +102,16 @@ public class ConfigManager implements Util {
     }
 
     public boolean configExists(String name) {
-        final List<File> files = Arrays.stream(Objects.requireNonNull(new File("oyvey").listFiles())).filter(File::isDirectory).collect(Collectors.toList());
-        return files.contains(new File("oyvey/" + name + "/"));
+        final List<File> files = Arrays.stream(Objects.requireNonNull(new File("Azorius").listFiles())).filter(File::isDirectory).collect(Collectors.toList());
+        return files.contains(new File("Azorius/" + name + "/"));
     }
 
     public void saveConfig(String name) {
-        this.config = "oyvey/" + name + "/";
+        this.config = "Azorius/" + name + "/";
         File path = new File(this.config);
         if (!path.exists())
             path.mkdir();
-        OyVey.friendManager.saveFriends();
+        Azorius.friendManager.saveFriends();
         for (Feature feature : this.features) {
             try {
                 saveSettings(feature);
@@ -123,18 +123,18 @@ public class ConfigManager implements Util {
     }
 
     public void saveCurrentConfig() {
-        File currentConfig = new File("oyvey/currentconfig.txt");
+        File currentConfig = new File("Azorius/currentconfig.txt");
         try {
             if (currentConfig.exists()) {
                 FileWriter writer = new FileWriter(currentConfig);
                 String tempConfig = this.config.replaceAll("/", "");
-                writer.write(tempConfig.replaceAll("oyvey", ""));
+                writer.write(tempConfig.replaceAll("Azorius", ""));
                 writer.close();
             } else {
                 currentConfig.createNewFile();
                 FileWriter writer = new FileWriter(currentConfig);
                 String tempConfig = this.config.replaceAll("/", "");
-                writer.write(tempConfig.replaceAll("oyvey", ""));
+                writer.write(tempConfig.replaceAll("Azorius", ""));
                 writer.close();
             }
         } catch (Exception e) {
@@ -143,7 +143,7 @@ public class ConfigManager implements Util {
     }
 
     public String loadCurrentConfig() {
-        File currentConfig = new File("oyvey/currentconfig.txt");
+        File currentConfig = new File("Azorius/currentconfig.txt");
         String name = "config";
         try {
             if (currentConfig.exists()) {
@@ -182,11 +182,11 @@ public class ConfigManager implements Util {
     }
 
     public void init() {
-        this.features.addAll(OyVey.moduleManager.modules);
-        this.features.add(OyVey.friendManager);
+        this.features.addAll(Azorius.moduleManager.modules);
+        this.features.add(Azorius.friendManager);
         String name = loadCurrentConfig();
         loadConfig(name);
-        OyVey.LOGGER.info("Config loaded.");
+        Azorius.LOGGER.info("Config loaded.");
     }
 
     private void loadSettings(Feature feature) throws IOException {
@@ -202,7 +202,7 @@ public class ConfigManager implements Util {
         try {
             loadFile((new JsonParser()).parse(new InputStreamReader(stream)).getAsJsonObject(), feature);
         } catch (IllegalStateException e) {
-            OyVey.LOGGER.error("Bad Config File for: " + feature.getName() + ". Resetting...");
+            Azorius.LOGGER.error("Bad Config File for: " + feature.getName() + ". Resetting...");
             loadFile(new JsonObject(), feature);
         }
         stream.close();

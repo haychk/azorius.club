@@ -1,8 +1,8 @@
-package me.alpha432.oyvey.manager;
+package me.hk.azorius.manager;
 
-import me.alpha432.oyvey.features.Feature;
-import me.alpha432.oyvey.features.modules.client.HUD;
-import me.alpha432.oyvey.util.Timer;
+import me.hk.azorius.features.Feature;
+import me.hk.azorius.features.modules.client.HUD;
+import me.hk.azorius.util.Timer;
 
 import java.text.DecimalFormat;
 import java.util.Arrays;

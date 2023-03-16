@@ -1,13 +1,13 @@
-package me.alpha432.oyvey.features.modules.combat;
+package me.hk.azorius.features.modules.combat;
 
-import me.alpha432.oyvey.OyVey;
-import me.alpha432.oyvey.event.events.UpdateWalkingPlayerEvent;
-import me.alpha432.oyvey.features.modules.Module;
-import me.alpha432.oyvey.features.setting.Setting;
-import me.alpha432.oyvey.util.DamageUtil;
-import me.alpha432.oyvey.util.EntityUtil;
-import me.alpha432.oyvey.util.MathUtil;
-import me.alpha432.oyvey.util.Timer;
+import me.hk.azorius.Azorius;
+import me.hk.azorius.event.events.UpdateWalkingPlayerEvent;
+import me.hk.azorius.features.modules.Module;
+import me.hk.azorius.features.setting.Setting;
+import me.hk.azorius.util.DamageUtil;
+import me.hk.azorius.util.EntityUtil;
+import me.hk.azorius.util.MathUtil;
+import me.hk.azorius.util.Timer;
 import net.minecraft.entity.Entity;
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraftforge.fml.common.eventhandler.SubscribeEvent;
@@ -48,14 +48,14 @@ public class Killaura extends Module {
             target = null;
             return;
         }
-        int wait = !this.delay.getValue().booleanValue() ? 0 : (int) (DamageUtil.getCooldownByWeapon(mc.player) * (this.tps.getValue().booleanValue() ? OyVey.serverManager.getTpsFactor() : 1.0F));
+        int wait = !this.delay.getValue().booleanValue() ? 0 : (int) (DamageUtil.getCooldownByWeapon(mc.player) * (this.tps.getValue().booleanValue() ? Azorius.serverManager.getTpsFactor() : 1.0F));
         if (!this.timer.passedMs(wait))
             return;
         target = getTarget();
         if (target == null)
             return;
         if (this.rotate.getValue().booleanValue())
-            OyVey.rotationManager.lookAtEntity(target);
+            Azorius.rotationManager.lookAtEntity(target);
         EntityUtil.attackEntity(target, this.packet.getValue().booleanValue(), true);
         this.timer.reset();
     }

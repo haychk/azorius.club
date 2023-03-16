@@ -1,20 +1,20 @@
-package me.alpha432.oyvey.manager;
+package me.hk.azorius.manager;
 
 import com.mojang.realmsclient.gui.ChatFormatting;
-import me.alpha432.oyvey.OyVey;
-import me.alpha432.oyvey.event.events.Render2DEvent;
-import me.alpha432.oyvey.event.events.Render3DEvent;
-import me.alpha432.oyvey.features.Feature;
-import me.alpha432.oyvey.features.modules.Module;
-import me.alpha432.oyvey.features.modules.client.ClickGui;
-import me.alpha432.oyvey.features.modules.client.FontMod;
-import me.alpha432.oyvey.features.modules.client.HUD;
-import me.alpha432.oyvey.features.modules.combat.*;
-import me.alpha432.oyvey.features.modules.misc.*;
-import me.alpha432.oyvey.features.modules.movement.*;
-import me.alpha432.oyvey.features.modules.player.*;
-import me.alpha432.oyvey.features.modules.render.*;
-import me.alpha432.oyvey.util.Util;
+import me.hk.azorius.Azorius;
+import me.hk.azorius.event.events.Render2DEvent;
+import me.hk.azorius.event.events.Render3DEvent;
+import me.hk.azorius.features.Feature;
+import me.hk.azorius.features.modules.Module;
+import me.hk.azorius.features.modules.client.ClickGui;
+import me.hk.azorius.features.modules.client.FontMod;
+import me.hk.azorius.features.modules.client.HUD;
+import me.hk.azorius.features.modules.combat.*;
+import me.hk.azorius.features.modules.misc.*;
+import me.hk.azorius.features.modules.movement.*;
+import me.hk.azorius.features.modules.player.*;
+import me.hk.azorius.features.modules.render.*;
+import me.hk.azorius.util.Util;
 import net.minecraftforge.common.MinecraftForge;
 import net.minecraftforge.fml.common.eventhandler.EventBus;
 import org.lwjgl.input.Keyboard;
@@ -232,7 +232,7 @@ public class ModuleManager
     }
 
     public void onKeyPressed(int eventKey) {
-        if (eventKey == 0 || !Keyboard.getEventKeyState() || ModuleManager.mc.currentScreen instanceof me.alpha432.oyvey.features.gui.AzoriusGui) {
+        if (eventKey == 0 || !Keyboard.getEventKeyState() || ModuleManager.mc.currentScreen instanceof me.hk.azorius.features.gui.AzoriusGui) {
             return;
         }
         this.modules.forEach(module -> {
@@ -277,7 +277,7 @@ public class ModuleManager
                 }
             } else {
                 for (String e : ModuleManager.this.sortedModulesABC) {
-                    Module module = OyVey.moduleManager.getModuleByName(e);
+                    Module module = Azorius.moduleManager.getModuleByName(e);
                     String text = module.getDisplayName() + ChatFormatting.GRAY + (module.getDisplayInfo() != null ? " [" + ChatFormatting.WHITE + module.getDisplayInfo() + ChatFormatting.GRAY + "]" : "");
                     module.offset = (float) ModuleManager.this.renderer.getStringWidth(text) / HUD.getInstance().animationHorizontalTime.getValue().floatValue();
                     module.vOffset = (float) ModuleManager.this.renderer.getFontHeight() / HUD.getInstance().animationVerticalTime.getValue().floatValue();

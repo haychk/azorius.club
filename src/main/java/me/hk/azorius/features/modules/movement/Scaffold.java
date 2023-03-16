@@ -1,6 +1,6 @@
-package me.alpha432.oyvey.features.modules.movement;
+package me.hk.azorius.features.modules.movement;
 
-import me.alpha432.oyvey.features.modules.Module;
+import me.hk.azorius.features.modules.Module;
 
 public class Scaffold
         extends Module {

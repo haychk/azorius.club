@@ -1,10 +1,10 @@
-package me.alpha432.oyvey.features.modules.player;
+package me.hk.azorius.features.modules.player;
 
 import com.google.gson.JsonObject;
 import com.google.gson.JsonParser;
 import com.mojang.authlib.GameProfile;
-import me.alpha432.oyvey.features.command.Command;
-import me.alpha432.oyvey.features.modules.Module;
+import me.hk.azorius.features.command.Command;
+import me.hk.azorius.features.modules.Module;
 import net.minecraft.client.entity.EntityOtherPlayerMP;
 import org.apache.commons.io.IOUtils;
 

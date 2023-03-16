@@ -1,8 +1,8 @@
-package me.alpha432.oyvey.mixin.mixins;
+package me.hk.azorius.mixin.mixins;
 
-import me.alpha432.oyvey.features.modules.client.ClickGui;
-import me.alpha432.oyvey.features.modules.render.Wireframe;
-import me.alpha432.oyvey.util.ColorUtil;
+import me.hk.azorius.features.modules.client.ClickGui;
+import me.hk.azorius.features.modules.render.Wireframe;
+import me.hk.azorius.util.ColorUtil;
 import net.minecraft.client.model.ModelBase;
 import net.minecraft.client.model.ModelEnderCrystal;
 import net.minecraft.client.renderer.GlStateManager;

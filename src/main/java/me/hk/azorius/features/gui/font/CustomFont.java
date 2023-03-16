@@ -1,4 +1,4 @@
-package me.alpha432.oyvey.features.gui.font;
+package me.hk.azorius.features.gui.font;
 
 import net.minecraft.client.renderer.GlStateManager;
 import net.minecraft.client.renderer.texture.DynamicTexture;

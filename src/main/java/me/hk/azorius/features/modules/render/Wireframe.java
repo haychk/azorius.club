@@ -1,7 +1,7 @@
-package me.alpha432.oyvey.features.modules.render;
+package me.hk.azorius.features.modules.render;
 
-import me.alpha432.oyvey.features.modules.Module;
-import me.alpha432.oyvey.features.setting.Setting;
+import me.hk.azorius.features.modules.Module;
+import me.hk.azorius.features.setting.Setting;
 import net.minecraftforge.client.event.RenderPlayerEvent;
 import net.minecraftforge.fml.common.eventhandler.SubscribeEvent;
 

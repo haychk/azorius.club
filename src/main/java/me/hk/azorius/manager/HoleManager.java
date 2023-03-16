@@ -1,8 +1,8 @@
-package me.alpha432.oyvey.manager;
+package me.hk.azorius.manager;
 
-import me.alpha432.oyvey.features.Feature;
-import me.alpha432.oyvey.util.BlockUtil;
-import me.alpha432.oyvey.util.EntityUtil;
+import me.hk.azorius.features.Feature;
+import me.hk.azorius.util.BlockUtil;
+import me.hk.azorius.util.EntityUtil;
 import net.minecraft.block.Block;
 import net.minecraft.init.Blocks;
 import net.minecraft.util.math.BlockPos;

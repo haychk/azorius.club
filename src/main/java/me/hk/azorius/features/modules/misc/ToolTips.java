@@ -1,11 +1,11 @@
-package me.alpha432.oyvey.features.modules.misc;
+package me.hk.azorius.features.modules.misc;
 
-import me.alpha432.oyvey.event.events.Render2DEvent;
-import me.alpha432.oyvey.features.modules.Module;
-import me.alpha432.oyvey.features.modules.client.ClickGui;
-import me.alpha432.oyvey.util.ColorUtil;
-import me.alpha432.oyvey.util.RenderUtil;
-import me.alpha432.oyvey.util.Timer;
+import me.hk.azorius.event.events.Render2DEvent;
+import me.hk.azorius.features.modules.Module;
+import me.hk.azorius.features.modules.client.ClickGui;
+import me.hk.azorius.util.ColorUtil;
+import me.hk.azorius.util.RenderUtil;
+import me.hk.azorius.util.Timer;
 import net.minecraft.client.renderer.GlStateManager;
 import net.minecraft.client.renderer.RenderHelper;
 import net.minecraft.entity.player.EntityPlayer;

@@ -1,8 +1,8 @@
-package me.alpha432.oyvey.mixin.mixins;
+package me.hk.azorius.mixin.mixins;
 
-import me.alpha432.oyvey.OyVey;
-import me.alpha432.oyvey.event.events.KeyEvent;
-import me.alpha432.oyvey.features.modules.player.MultiTask;
+import me.hk.azorius.Azorius;
+import me.hk.azorius.event.events.KeyEvent;
+import me.hk.azorius.features.modules.player.MultiTask;
 import net.minecraft.client.Minecraft;
 import net.minecraft.client.entity.EntityPlayerSP;
 import net.minecraft.client.multiplayer.PlayerControllerMP;
@@ -38,9 +38,9 @@ public abstract class MixinMinecraft {
     }
 
     private void unload() {
-        OyVey.LOGGER.info("Initiated client shutdown.");
-        OyVey.onUnload();
-        OyVey.LOGGER.info("Finished client shutdown.");
+        Azorius.LOGGER.info("Initiated client shutdown.");
+        Azorius.onUnload();
+        Azorius.LOGGER.info("Finished client shutdown.");
     }
 
     @Redirect(method = {"sendClickBlockToController"}, at = @At(value = "INVOKE", target = "Lnet/minecraft/client/entity/EntityPlayerSP;isHandActive()Z"))

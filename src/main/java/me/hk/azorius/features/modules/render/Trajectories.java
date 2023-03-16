@@ -2,10 +2,10 @@
 // Decompiled by Procyon v0.5.36
 //
 
-package me.alpha432.oyvey.features.modules.render;
+package me.hk.azorius.features.modules.render;
 
-import me.alpha432.oyvey.event.events.Render3DEvent;
-import me.alpha432.oyvey.features.modules.Module;
+import me.hk.azorius.event.events.Render3DEvent;
+import me.hk.azorius.features.modules.Module;
 import net.minecraft.client.renderer.GlStateManager;
 import net.minecraft.entity.Entity;
 import net.minecraft.init.Items;

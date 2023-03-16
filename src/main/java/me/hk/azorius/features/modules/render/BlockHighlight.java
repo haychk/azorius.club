@@ -1,11 +1,11 @@
-package me.alpha432.oyvey.features.modules.render;
+package me.hk.azorius.features.modules.render;
 
-import me.alpha432.oyvey.event.events.Render3DEvent;
-import me.alpha432.oyvey.features.modules.Module;
-import me.alpha432.oyvey.features.modules.client.ClickGui;
-import me.alpha432.oyvey.features.setting.Setting;
-import me.alpha432.oyvey.util.ColorUtil;
-import me.alpha432.oyvey.util.RenderUtil;
+import me.hk.azorius.event.events.Render3DEvent;
+import me.hk.azorius.features.modules.Module;
+import me.hk.azorius.features.modules.client.ClickGui;
+import me.hk.azorius.features.setting.Setting;
+import me.hk.azorius.util.ColorUtil;
+import me.hk.azorius.util.RenderUtil;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.util.math.RayTraceResult;
 

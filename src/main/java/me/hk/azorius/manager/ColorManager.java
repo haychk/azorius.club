@@ -1,8 +1,8 @@
 package me.hk.azorius.manager;
 
-import me.alpha432.oyvey.features.gui.components.Component;
-import me.alpha432.oyvey.features.modules.client.ClickGui;
-import me.alpha432.oyvey.util.ColorUtil;
+import me.hk.azorius.features.gui.components.Component;
+import me.hk.azorius.features.modules.client.ClickGui;
+import me.hk.azorius.util.ColorUtil;
 
 import java.awt.*;
 
