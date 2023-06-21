@@ -8,15 +8,20 @@ import me.hk.azorius.event.events.Render3DEvent;
 import me.hk.azorius.features.Feature;
 import me.hk.azorius.features.command.Command;
 import me.hk.azorius.features.modules.client.HUD;
+import me.hk.azorius.features.modules.client.ModuleTools;
 import me.hk.azorius.features.setting.Bind;
 import me.hk.azorius.features.setting.Setting;
+import net.minecraft.client.entity.EntityOtherPlayerMP;
+import net.minecraft.client.model.ModelPlayer;
 import net.minecraft.util.text.TextComponentString;
 import net.minecraftforge.common.MinecraftForge;
 
-public class Module
-        extends Feature {
+public class Module extends Feature {
+
+    private static Module INSTANCE;
     private final String description;
     private final Category category;
+
     public Setting<Boolean> enabled = this.register(new Setting<Boolean>("Enabled", false));
     public Setting<Boolean> drawn = this.register(new Setting<Boolean>("Drawn", true));
     public Setting<Bind> bind = this.register(new Setting<Bind>("Keybind", new Bind(-1)));
@@ -39,6 +44,7 @@ public class Module
         this.hidden = hidden;
         this.alwaysListening = alwaysListening;
     }
+
 
     public boolean isSliding() {
         return this.sliding;
@@ -97,18 +103,74 @@ public class Module
         }
     }
 
+
+    public TextComponentString getNotifierOn() {
+        if (ModuleTools.getInstance().isEnabled()) {
+            switch (ModuleTools.getInstance().notifier.getValue()) {
+                case FUTURE: {
+                    TextComponentString text = new TextComponentString(ChatFormatting.RED + "[Future] " + ChatFormatting.GRAY + this.getDisplayName() + " toggled " + ChatFormatting.GREEN + "on" + ChatFormatting.GRAY + ".");
+                    return text;
+                }
+                case DOTGOD: {
+                    TextComponentString text = new TextComponentString(ChatFormatting.DARK_PURPLE + "[" + ChatFormatting.LIGHT_PURPLE + "DotGod.CC" + ChatFormatting.DARK_PURPLE + "] " + ChatFormatting.DARK_AQUA + this.getDisplayName() + ChatFormatting.LIGHT_PURPLE + " was " + ChatFormatting.GREEN + "enabled.");
+                    return text;
+
+                }
+                case PHOBOS: {
+                    TextComponentString text = new TextComponentString((HUD.getInstance().getCommandMessage()) + ChatFormatting.BOLD + " " + this.getDisplayName() + ChatFormatting.RESET + ChatFormatting.GREEN + " enabled.");
+                    return text;
+
+                }
+                case TROLLGOD: {
+                    TextComponentString text = new TextComponentString((HUD.getInstance().getCommandMessage()) + ChatFormatting.DARK_PURPLE + " " + this.getDisplayName() + ChatFormatting.LIGHT_PURPLE + " was " + ChatFormatting.GREEN + "enabled.");
+                    return text;
+                }
+            }
+        }
+        TextComponentString text = new TextComponentString(HUD.getInstance().getCommandMessage() + ChatFormatting.GREEN + " " + this.getDisplayName() + " toggled on.");
+        return text;
+    }
+
+    public TextComponentString getNotifierOff() {
+        if (ModuleTools.getInstance().isEnabled()) {
+            switch (ModuleTools.getInstance().notifier.getValue()) {
+                case FUTURE: {
+                    TextComponentString text = new TextComponentString(ChatFormatting.RED + "[Future] " + ChatFormatting.GRAY + this.getDisplayName() + " toggled " + ChatFormatting.RED + "off" + ChatFormatting.GRAY + ".");
+                    return text;
+                }
+                case DOTGOD: {
+                    TextComponentString text = new TextComponentString(ChatFormatting.DARK_PURPLE + "[" + ChatFormatting.LIGHT_PURPLE + "DotGod.CC" + ChatFormatting.DARK_PURPLE + "] " + ChatFormatting.DARK_AQUA + this.getDisplayName() + ChatFormatting.LIGHT_PURPLE + " was " + ChatFormatting.RED + "disabled.");
+                    return text;
+
+                }
+                case PHOBOS: {
+                    TextComponentString text = new TextComponentString((HUD.getInstance().getCommandMessage()) + ChatFormatting.BOLD + this.getDisplayName() + ChatFormatting.RESET + ChatFormatting.RED + " disabled.");
+                    return text;
+
+                }
+                case TROLLGOD: {
+                    TextComponentString text = new TextComponentString((HUD.getInstance().getCommandMessage()) + ChatFormatting.DARK_PURPLE + " " + this.getDisplayName() + ChatFormatting.LIGHT_PURPLE + " was " + ChatFormatting.RED + "disabled.");
+                    return text;
+                }
+            }
+        }
+        TextComponentString text = new TextComponentString(HUD.getInstance().getCommandMessage() + ChatFormatting.RED + " " + this.getDisplayName() + " toggled off.");
+        return text;
+    }
+
+
     public void enable() {
         this.enabled.setValue(Boolean.TRUE);
         this.onToggle();
         this.onEnable();
         if (HUD.getInstance().notifyToggles.getValue().booleanValue()) {
-            TextComponentString text = new TextComponentString(Azorius.commandManager.getClientMessage() + " " + ChatFormatting.GREEN + this.getDisplayName() + " toggled on.");
-            Module.mc.ingameGUI.getChatGUI().printChatMessageWithOptionalDeletion(text, 1);
-        }
-        if (this.isOn() && this.hasListener && !this.alwaysListening) {
-            MinecraftForge.EVENT_BUS.register(this);
+            Module.mc.ingameGUI.getChatGUI().printChatMessageWithOptionalDeletion(getNotifierOn(), 1);
+            if (this.isOn() && this.hasListener && !this.alwaysListening) {
+                MinecraftForge.EVENT_BUS.register(this);
+            }
         }
     }
+
 
     public void disable() {
         if (this.hasListener && !this.alwaysListening) {
@@ -116,9 +178,9 @@ public class Module
         }
         this.enabled.setValue(false);
         if (HUD.getInstance().notifyToggles.getValue().booleanValue()) {
-            TextComponentString text = new TextComponentString(Azorius.commandManager.getClientMessage() + " " + ChatFormatting.RED + this.getDisplayName() + " toggled off.");
-            Module.mc.ingameGUI.getChatGUI().printChatMessageWithOptionalDeletion(text, 1);
+            Module.mc.ingameGUI.getChatGUI().printChatMessageWithOptionalDeletion(getNotifierOff(), 1);
         }
+
         this.onToggle();
         this.onDisable();
     }
@@ -201,4 +263,3 @@ public class Module
         }
     }
 }
-

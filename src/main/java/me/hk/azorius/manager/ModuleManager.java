@@ -9,6 +9,7 @@ import me.hk.azorius.features.modules.Module;
 import me.hk.azorius.features.modules.client.ClickGui;
 import me.hk.azorius.features.modules.client.FontMod;
 import me.hk.azorius.features.modules.client.HUD;
+import me.hk.azorius.features.modules.client.ModuleTools;
 import me.hk.azorius.features.modules.combat.*;
 import me.hk.azorius.features.modules.misc.*;
 import me.hk.azorius.features.modules.movement.*;
@@ -86,6 +87,7 @@ public class ModuleManager
         this.modules.add(new AutoMinecart());
         this.modules.add(new SelfFill());
         this.modules.add(new ArrowESP());
+        this.modules.add(new ModuleTools());
     }
 
     public Module getModuleByName(String name) {
